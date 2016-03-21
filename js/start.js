@@ -24,11 +24,6 @@ function setDate() {
     $('#date').html(`${monthString(month)} ${day}`);
 }
 
-/**********   CALL METHODS HERE   **********/
-checkForCustomName();
-setDate();
-/*******************************************/
-
 function monthString(month) {
     switch (month) {
         case 0: return 'January';
@@ -46,3 +41,8 @@ function monthString(month) {
         default: return 'null';
     }
 }
+
+/**********   CALL METHODS HERE   **********/
+checkForCustomName();
+setDate();
+/*******************************************/

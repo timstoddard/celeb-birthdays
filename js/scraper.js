@@ -1,19 +1,6 @@
-// http://www.imdb.com/rg/rss/BORN-channel/OnThisDay
 // http://www.imdb.com/search/name?birth_monthday=3-20
 
 $(function() {
-
-    // run python file
-    /*$.ajax({
-        type: 'POST',
-        url: '../python/IMDbScraper.py',
-        success: function(data) {
-            console.log('success!');
-        },
-        error: function(data) {
-            console.log('there was an error')
-        }
-    });*/
     
     // load json data
     $.ajax({
@@ -35,4 +22,5 @@ $(function() {
             }
         }
     });
+
 });

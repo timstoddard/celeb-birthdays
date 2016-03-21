@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Birthdays</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/start.css">
+</head>
+
+<body>
+    <div class="center-block text-center">
+
+        <h1>Welcome<span id="name"></span>!</h1>
+        <hr>
+        <h2>The top <span id="numCelebs">5</span> celebrities born on <span id="date"></span> are...</h2>
+        
+        <div id="celebs">
+            <div id="celeb1" class="celeb"></div>
+            <div id="celeb2" class="celeb">
+                <img src="images/glenn.jpg">
+                <div class="bottom-text-1">Glenn Close</div>
+                <div class="bottom-text-2">69 years old</div>
+            </div>
+            <div id="celeb3" class="celeb">
+                <img src="images/rachel.jpg">
+                <div class="bottom-text-1">Rachel Blanchard</div>
+                <div class="bottom-text-2">40 years old</div>
+            </div>
+            <div id="celeb4" class="celeb">
+                <img src="images/jake.jpg">
+                <div class="bottom-text-1">Jake Weber</div>
+                <div class="bottom-text-2">52 years old</div>
+            </div>
+            <div id="celeb5" class="celeb">
+                <img src="images/virginia.jpg">
+                <div class="bottom-text-1">Virginia Williams</div>
+                <div class="bottom-text-2">38 years old</div>
+            </div>
+        </div>
+        
+        <div id="spacer">_</div>
+        
+        <div id="footer">
+            <div id="footer-text">Information provided by <a href="http://www.imdb.com">IMDb</a></div>
+        </div>
+        
+    </div>
+
+    <script src="./js/jquery-2.2.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/start.js"></script>
+    <script src="./js/scraper.js"></script>
+</body>
+</html>

@@ -21,7 +21,7 @@ soup = BeautifulSoup(page, 'html.parser')
 born_today_raw = soup.findAll('div', {'class': 'widget_image'})
 born_today = [];
 
-json_string = '{'
+json_string = '{\n'
 
 for prop in born_today_raw:
     if '<a href="/name/nm' in str(prop):
@@ -32,12 +32,12 @@ for i in range(len(born_today)):
     json_string += '"celeb' + str(i + 1) + '":{'
     
     inner_page = urlopen(format_name_link('http://imdb.com' + born_today[i].findAll('a')[0]['href']), timeout=10)
-    get_img(BeautifulSoup(inner_page, 'html.parser').findAll('img', {'id': 'name-poster'})[0]['src'], i - 8)
+    get_img(BeautifulSoup(inner_page, 'html.parser').findAll('img', {'id': 'name-poster'})[0]['src'], i + 1)
     
     name_and_age = format_name_and_age(born_today[i].findAll('div')[1].text.strip())
     json_string += name_and_age
     
-    json_string += '}' + (',' if i < 13 else '') + '\n'
+    json_string += '}' + (',' if i < 4 else '') + '\n'
 
 json_string += '}'
 print(json_string)
